@@ -9,6 +9,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Button btn1;
+    int count1 = 0;
     //add button btn1
 
     @Override
@@ -21,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Pick Me Pick Me Pick Me Up", Toast.LENGTH_SHORT).show();
+                count1++;
+
+                if(count1%3 == 0){
+                    Toast.makeText(getApplicationContext(), "3번째마다 클릭한 결과 입니다.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
